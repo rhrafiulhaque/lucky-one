@@ -3,7 +3,6 @@ import './Shop.css';
 import React, { useEffect, useState } from 'react';
 import Product from '../Product/Product';
 import SelectedShoes from '../SelectedShoes/SelectedShoes';
-import ShowProduct from '../ShowProduct/ShowProduct';
 
 const Shop = () => {
     const [products,setProducts] = useState([]);
