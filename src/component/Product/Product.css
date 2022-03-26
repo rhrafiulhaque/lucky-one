@@ -21,7 +21,7 @@
 }
 .cart-btn{
     width: 100%;
-    background-color: #FFE0B3;;
+    background-color: #F58018;;
     padding: 10px;
     border:none;
     border-radius: 5px;
@@ -29,5 +29,5 @@
     bottom: 0;
 }
 .cart-btn:hover{
-    background-color: orange;
+    background-color: #F56903;
 }

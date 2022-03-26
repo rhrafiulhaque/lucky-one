@@ -1,12 +1,23 @@
 import React from 'react';
+import ShowProduct from '../ShowProduct/ShowProduct';
 import './SelectedShoes.css'
 
 const SelectedShoes = (props) => {
+       const {cart}=props;      
     return (
         <div className='show-product'>
-            <p>product 1</p>
-            <p>product 2</p>
-            
+            <h1>Selected Shoes</h1> 
+          {
+              cart.map(carts=><ShowProduct 
+                key={carts.id}
+                name={carts.name}
+              ></ShowProduct>)
+              
+          }
+
+          <button className='choose'>Choose One For Me</button>
+          <button className='clear'>Clear Cart</button>
+
         </div>
     );
 };

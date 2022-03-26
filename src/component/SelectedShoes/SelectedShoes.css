@@ -1,3 +1,14 @@
 .show-product{
     padding: 10px;
+    background-color: #F7AC44;
+}
+.choose, .clear{
+    padding: 10px;
+    display: block;
+    background-color: #F56903;
+    border-radius:  7px;
+    border: none;
+    margin-bottom: 10px;
+    
+
 }
