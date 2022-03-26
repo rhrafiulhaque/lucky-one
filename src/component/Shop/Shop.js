@@ -16,7 +16,12 @@ const Shop = () => {
 
     const handleAddProduct=(products)=>{
         const newCart = [...cart,products];
-        setCart(newCart);
+        if(cart.length>=4){
+            alert('Don\'t Select Above Four Product! Thank You!');
+        }else{
+            setCart(newCart);
+        }
+        
     }
     return (
         <div className='shop-conatianer'>

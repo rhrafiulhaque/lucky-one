@@ -6,7 +6,8 @@ const SelectedShoes = (props) => {
        const {cart}=props;      
     return (
         <div className='show-product'>
-            <h1>Selected Shoes</h1> 
+            <h3>Selected Shoes: {cart.length}</h3> 
+            <p>[Please Do not select Above Four Product]</p>
           {
               cart.map(carts=><ShowProduct 
                 key={carts.id}
