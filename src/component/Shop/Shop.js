@@ -3,6 +3,7 @@ import './Shop.css';
 import React, { useEffect, useState } from 'react';
 import Product from '../Product/Product';
 import SelectedShoes from '../SelectedShoes/SelectedShoes';
+import ShowProduct from '../ShowProduct/ShowProduct';
 
 const Shop = () => {
     const [products,setProducts] = useState([]);
@@ -14,6 +15,8 @@ const Shop = () => {
 
     },[])
 
+    // New product add in cart 
+
     const handleAddProduct=(products)=>{
         const newCart = [...cart,products];
         if(cart.length>=4){
@@ -23,6 +26,30 @@ const Shop = () => {
         }
         
     }
+
+
+    // Generate Random Number 
+    function reset(){
+        const x = Math.floor((Math.random() * 10));
+        if(x>3){
+         return reset();
+        }
+        else{
+        return x;
+        }
+        }
+
+    // One Product SHow 
+    const chooseOne=()=>{        
+            const x= reset();
+            setCart(cartList=>cartList.filter((_,i)=>i===x));       
+            
+    }
+
+    const clearCart =()=> setCart([]);
+
+
+   
     return (
         <div className='shop-conatianer'>
             <div className="product-container">
@@ -35,7 +62,7 @@ const Shop = () => {
             </div>
             <div className="cart-container">
                                
-                <SelectedShoes cart={cart}></SelectedShoes>
+                <SelectedShoes cart={cart} clearCart={clearCart} chooseOne={chooseOne}  ></SelectedShoes>
             </div>
             
         </div>

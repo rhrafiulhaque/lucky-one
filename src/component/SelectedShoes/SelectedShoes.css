@@ -1,10 +1,11 @@
 .show-product{
+    margin-top: 20px;
     padding: 10px;
     background-color: #F1DA7D;
     position: sticky;
     top: 0;
 }
-.show-product h3{
+.show-product h3,p{
     text-align: center;
 }
 .show-product p{ color: red;}
